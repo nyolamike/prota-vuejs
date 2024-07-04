@@ -7,6 +7,7 @@ import BasicChartView from '@/views/Charts/BasicChartView.vue'
 import ECommerceView from '@/views/Dashboard/ECommerceView.vue'
 import ClientsList from '@/views/Clients/ClientsList.vue'
 import AddClient from '@/views/Clients/AddClient.vue'
+import InTransit from '@/views/Deliveries/InTransit.vue'
 import FormElementsView from '@/views/Forms/FormElementsView.vue'
 import FormLayoutView from '@/views/Forms/FormLayoutView.vue'
 import SettingsView from '@/views/Pages/SettingsView.vue'
@@ -16,6 +17,15 @@ import AlertsView from '@/views/UiElements/AlertsView.vue'
 import ButtonsView from '@/views/UiElements/ButtonsView.vue'
 
 const routes = [
+  {
+    path: '/Deliveries/intransit',
+    name: 'inTransit',
+    component: InTransit,
+    meta: {
+      title: 'InTransit'
+    }
+  },
+
   {
     path: '/clients/list',
     name: 'clientsList',
