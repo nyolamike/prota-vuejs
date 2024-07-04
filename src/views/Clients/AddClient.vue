@@ -15,59 +15,63 @@ const pageTitle = ref('Add Client')
       <!-- Breadcrumb Start -->
       <BreadcrumbDefault :pageTitle="pageTitle" />
       <!-- Breadcrumb End -->
-     
-      <div class="grid grid-cols-1 gap-9 sm:grid-cols-2">
-        <div class="flex flex-col gap-9">
+
+      <div class="grid w-full grid-cols-1 bg-red">
+        <div class="flex flex-col bg-success">
           <!-- Contact Form Start -->
-          <DefaultCard cardTitle="Contact Form">
+          <DefaultCard cardTitle="Fill in the form to register a new client" class="">
             <form action="#">
               <div class="p-6.5">
-                <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
+                
                   <InputGroup
-                    label="First name"
+                    label="Client's name"
                     type="text"
-                    placeholder="Enter your first name"
-                    customClasses="w-full xl:w-1/2"
+                    placeholder="Enter client's name"
+                    customClasses="mb-4.5"
                   />
-
-                  <InputGroup
-                    label="Last name"
-                    type="text"
-                    placeholder="Enter your last name"
-                    customClasses="w-full xl:w-1/2"
-                  />
-                </div>
+                
 
                 <InputGroup
                   label="Email"
                   type="email"
-                  placeholder="Enter your email address"
+                  placeholder="Enter client's email address"
+                  customClasses="mb-4.5"
+                  
+                />
+
+                <InputGroup
+                  label="Phone Number"
+                  type="text"
+                  placeholder="Enter client's phone number"
                   customClasses="mb-4.5"
                   required
                 />
 
                 <InputGroup
-                  label="Subject"
+                  label="Location"
                   type="text"
-                  placeholder="Enter your subject"
+                  placeholder="Enter client's location"
                   customClasses="mb-4.5"
+                  required
                 />
 
                 <SelectGroupTwo />
 
                 <div class="mb-6">
-                  <label class="mb-2.5 block text-black dark:text-white"> Message </label>
+                  <label class="mb-2.5 block text-black dark:text-white"> Other Details </label>
                   <textarea
                     rows="6"
-                    placeholder="Type your message"
+                    placeholder="Type other details"
                     class="w-full rounded border-[1.5px] text-black border-stroke bg-transparent py-3 px-5 font-normal outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:text-white dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
+                   
                   ></textarea>
+                 
                 </div>
 
                 <button
                   class="flex w-full justify-center rounded bg-primary p-3 font-medium text-gray hover:bg-opacity-90"
                 >
-                  Send Message
+                  Add Client
                 </button>
               </div>
             </form>
@@ -75,7 +79,6 @@ const pageTitle = ref('Add Client')
           <!-- Contact Form End -->
         </div>
       </div>
-     
     </div>
   </DefaultLayout>
 </template>
