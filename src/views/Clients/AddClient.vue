@@ -22,21 +22,18 @@ const pageTitle = ref('Add Client')
           <DefaultCard cardTitle="Fill in the form to register a new client" class="">
             <form action="#">
               <div class="p-6.5">
-                
-                  <InputGroup
-                    label="Client's name"
-                    type="text"
-                    placeholder="Enter client's name"
-                    customClasses="mb-4.5"
-                  />
-                
+                <InputGroup
+                  label="Client's name"
+                  type="text"
+                  placeholder="Enter client's name"
+                  customClasses="mb-4.5"
+                />
 
                 <InputGroup
                   label="Email"
                   type="email"
                   placeholder="Enter client's email address"
                   customClasses="mb-4.5"
-                  
                 />
 
                 <InputGroup
@@ -63,9 +60,7 @@ const pageTitle = ref('Add Client')
                     rows="6"
                     placeholder="Type other details"
                     class="w-full rounded border-[1.5px] text-black border-stroke bg-transparent py-3 px-5 font-normal outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:text-white dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
-                   
                   ></textarea>
-                 
                 </div>
 
                 <button

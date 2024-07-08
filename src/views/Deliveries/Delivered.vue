@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import BreadcrumbDefault from '@/components/Breadcrumbs/BreadcrumbDefault.vue'
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
 
-const pageTitle = ref('InTransit')
+const pageTitle = ref('Delivered')
 
 const clients = ref([
   {
@@ -11,7 +11,8 @@ const clients = ref([
     items: 'Parcel',
     consignee: 'Hillary',
     arrival_date: '01/01/2024',
-    dispatch_date: '30/12/2023'
+    dispatch_date: '30/12/2023',
+    comments:'arrived in expected time'
   },
 
   {
@@ -19,7 +20,8 @@ const clients = ref([
     items: 'Parcel',
     consignee: 'Abel',
     arrival_date: '02/03/2024',
-    dispatch_date: '01/03/2024'
+    dispatch_date: '01/03/2024',
+    comments:'arrived in expected time'
   },
 
   {
@@ -27,7 +29,8 @@ const clients = ref([
     items: 'Parcel',
     consignee: 'John',
     arrival_date: '02/03/2024',
-    dispatch_date: '01/03/2024'
+    dispatch_date: '01/03/2024',
+    comments:'arrived in expected time'
   },
 
   {
@@ -35,7 +38,8 @@ const clients = ref([
     items: 'Parcel',
     consignee: 'Peter',
     arrival_date: '01/03/2024',
-    dispatch_date: '01/03/2024'
+    dispatch_date: '01/03/2024',
+    comments:'arrived in expected time'
   }
 ])
 </script>
@@ -63,10 +67,13 @@ const clients = ref([
                   Consigner
                 </th>
                 <th class="min-w-[150px] py-4 px-4 font-medium text-black dark:text-white">
-                  Expected Arrival date
+                Arrival date
                 </th>
                 <th class="min-w-[150px] py-4 px-4 font-medium text-black dark:text-white">
                   Dispatch date
+                </th>
+                <th class="min-w-[150px] py-4 px-4 font-medium text-black dark:text-white">
+                  Comments
                 </th>
                 <!-- <th class="min-w-[120px] py-4 px-4 font-medium text-black dark:text-white">
                   Status
@@ -91,7 +98,10 @@ const clients = ref([
                 <td class="py-5 px-4 pl-9 xl:pl-11">
                   {{ client.dispatch_date }}
                 </td>
-               
+
+<td class="py-5 px-4 pl-9 xl:pl-11">
+                  {{ client.comments }}
+                </td>               
                 <td class="py-5 px-4">
                   <div class="flex items-center space-x-3.5">
                     <button class="hover:text-primary">

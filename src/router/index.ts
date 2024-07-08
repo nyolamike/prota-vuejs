@@ -8,6 +8,9 @@ import ECommerceView from '@/views/Dashboard/ECommerceView.vue'
 import ClientsList from '@/views/Clients/ClientsList.vue'
 import AddClient from '@/views/Clients/AddClient.vue'
 import InTransit from '@/views/Deliveries/InTransit.vue'
+import AddDelivery from '@/views/Deliveries/AddDelivery.vue'
+import Pending from '@/views/Deliveries/Pending.vue'
+import Delivered from '@/views/Deliveries/Delivered.vue'
 import FormElementsView from '@/views/Forms/FormElementsView.vue'
 import FormLayoutView from '@/views/Forms/FormLayoutView.vue'
 import SettingsView from '@/views/Pages/SettingsView.vue'
@@ -18,11 +21,35 @@ import ButtonsView from '@/views/UiElements/ButtonsView.vue'
 
 const routes = [
   {
-    path: '/Deliveries/intransit',
+    path: '/deliveries/intransit',
     name: 'inTransit',
     component: InTransit,
     meta: {
       title: 'InTransit'
+    }
+  },
+  {
+    path: '/deliveries/pending',
+    name: 'pending',
+    component: Pending,
+    meta: {
+      title: 'Pending Deliveries'
+    }
+  },
+  {
+    path: '/deliveries/delivered',
+    name: 'delivered',
+    component: Delivered,
+    meta: {
+      title: 'Delivered Items'
+    }
+  },
+  {
+    path: '/deliveries/add',
+    name: 'addDelivery',
+    component: AddDelivery,
+    meta: {
+      title: 'Add Delivery Form'
     }
   },
 
@@ -149,7 +176,7 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  document.title = `Vue.js ${to.meta.title} | TailAdmin - Vue.js Tailwind CSS Dashboard Template`
+  document.title = `${to.meta.title} | Prota Holdings App`
   next()
 })
 
