@@ -16,7 +16,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div :class="customClasses">
+  <div :class="customClasses + ' w-full' ">
     <label class="mb-2.5 block text-black dark:text-white">
       {{ label }}
       <span v-if="required" class="text-meta-1">*</span>

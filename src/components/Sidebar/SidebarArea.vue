@@ -41,7 +41,7 @@ const menuGroups = ref([
           { label: 'InTransit', route: '/deliveries/intransit' },
           { label: 'Pending', route: '/deliveries/pending' },
            { label: 'Delivered', route: '/deliveries/delivered' },
-            { label: 'Add Delivery', route: '/deliveries/adddelivery' }
+            { label: 'Add Delivery', route: '/deliveries/add' }
         ]
       },
 

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-
 const selectedOption = ref<string>('')
 const isOptionSelected = ref<boolean>(false)
 
@@ -11,8 +10,7 @@ const changeTextColor = () => {
 
 <template>
   <div class="mb-4.5 w-full">
-    <label class="mb-2.5 block text-black dark:text-white"> Status </label>
-
+    <label class="mb-2.5 block text-black dark:text-white"> Transport Means</label>
     <div class="relative z-20 bg-transparent dark:bg-form-input">
       <select
         v-model="selectedOption"
@@ -20,9 +18,10 @@ const changeTextColor = () => {
         :class="{ 'text-black dark:text-white': isOptionSelected }"
         @change="changeTextColor"
       >
-        <option value="" disabled selected>Select client's status</option>
-        <option value="active">Active</option>
-        <option value="disabled">Disabled</option>
+        <option value="" disabled selected>Select Transport Means</option>
+        <option value="01">Boda</option>
+        <option value="02">Vehicle</option>
+        <option value="03">Bus</option>
       </select>
 
       <span class="absolute top-1/2 right-4 z-30 -translate-y-1/2">

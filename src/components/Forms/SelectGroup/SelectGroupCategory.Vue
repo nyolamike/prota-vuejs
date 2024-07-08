@@ -7,11 +7,12 @@ const isOptionSelected = ref<boolean>(false)
 const changeTextColor = () => {
   isOptionSelected.value = true
 }
+
 </script>
 
 <template>
-  <div class="mb-4.5 w-full">
-    <label class="mb-2.5 block text-black dark:text-white"> Status </label>
+  <div class="mb-4.5">
+    <label class="mb-2.5 block text-black dark:text-white"> Item Category </label>
 
     <div class="relative z-20 bg-transparent dark:bg-form-input">
       <select
@@ -20,9 +21,10 @@ const changeTextColor = () => {
         :class="{ 'text-black dark:text-white': isOptionSelected }"
         @change="changeTextColor"
       >
-        <option value="" disabled selected>Select client's status</option>
-        <option value="active">Active</option>
-        <option value="disabled">Disabled</option>
+        <option value="" disabled selected>Select item category</option>
+        <option value="01">Parcel</option>
+        <option value="02">Medical Equipment</option>
+        <option value="03">Technology</option>
       </select>
 
       <span class="absolute top-1/2 right-4 z-30 -translate-y-1/2">
