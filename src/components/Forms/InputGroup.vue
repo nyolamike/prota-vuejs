@@ -24,7 +24,7 @@ export default defineComponent({
     <input
       :type="type"
       :placeholder="placeholder"
-      class="w-full rounded border-[1.5px] text-black border-stroke bg-transparent py-3 px-5 font-normal outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:text-white dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
+      class="w-full rounded border-[2px] border-[#c9c9c9] text-black border-stroke bg-white py-3 px-5 font-normal outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:text-white dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
     />
   </div>
 </template>
